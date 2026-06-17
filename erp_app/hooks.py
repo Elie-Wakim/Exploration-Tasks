@@ -247,3 +247,26 @@ app_license = "agpl-3.0"
 # List of apps whose translatable strings should be excluded from this app's translations.
 # ignore_translatable_strings_from = []
 
+fixtures = [
+    {
+        "doctype": "Custom Field",
+        "filters": [
+            ["dt", "in", ["Sales Invoice"]]
+        ]
+    },
+    {
+        "doctype": "Custom Field",
+        "filters": [
+            ["dt", "in", ["Customer"]]
+        ]
+    }
+]
+doc_events = {
+    "Sales Invoice": {
+        "on_submit": "erp_app.invoice.on_invoice_submit"
+    }
+    
+}
+override_doctype_class = {
+    "Sales Invoice": "erp_app.invoice.CustomSalesInvoice"
+}
