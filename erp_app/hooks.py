@@ -251,14 +251,11 @@ fixtures = [
     {
         "doctype": "Custom Field",
         "filters": [
-            ["dt", "in", ["Sales Invoice"]]
+            ["dt", "in", ["Sales Invoice", "Customer"]]
         ]
     },
     {
-        "doctype": "Custom Field",
-        "filters": [
-            ["dt", "in", ["Customer"]]
-        ]
+        "Departments"
     }
 ]
 doc_events = {

@@ -5,7 +5,6 @@ class CustomSalesInvoice(SalesInvoice):
     
     def validate(self):
         super().validate()  
-        self.custom_validate()
         frappe.msgprint(f"Invoice validated for {self.customer}", indicator="green")
     
     def on_submit(self):
